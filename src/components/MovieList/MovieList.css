@@ -1,0 +1,68 @@
+.movieList {
+    margin-bottom: 30px;
+}
+
+.movieList h2 {
+    margin: 0 0 0 30px;
+}
+
+.movieList__listarea {
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+
+.movieList__list {
+    transition: all ease 0.5s;
+}
+
+.movieList__item {
+    display: inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+
+.movieList__item img {
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+}
+
+.movieList__item img:hover {
+    transform: scale(1);
+}
+
+.movieList__left,
+.movieList__right {
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.movieList__left {
+    left: 0;
+}
+
+.movieList__right {
+    right: 0;
+}
+
+.movieList:hover .movieList__left,
+.movieList:hover .movieList__right {
+    opacity: 1;
+}
+
+@media (max-width:760px) {
+    .movieList__left,
+    .movieList__right{
+        opacity: 1;
+    }
+}
